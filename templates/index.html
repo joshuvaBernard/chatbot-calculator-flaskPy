@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--    <link rel="Stylesheet" href="{{ url_for('static', filename='css/main.css') }}">-->
+    <title>chatbot-calculator</title>
+    <h3>My chatbot calculator</h3>
+</head>
+<body>
+    <div class="chat">
+        <div class="chat-box">
+            {% if exp%}
+            <div class="chat-box-user">
+                <p> {{ exp }}</p>
+            </div>
+            {% endif%}
+            {% if jss%}
+            <div class="chat-box-computer">
+                <p>{{ jss }}</p>
+            </div>
+            {% endif%}
+        </div>
+        <div class="chat-input">
+            <form action="/" method="POST">
+                <input type = "text" name="content" id="content">
+                <input type="submit" value="send">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
